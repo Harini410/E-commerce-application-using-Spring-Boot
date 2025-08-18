@@ -1,0 +1,26 @@
+# Maven build folder
+target
+
+# Eclipse
+.classpath
+.project
+.settings
+
+# IntelliJ IDEA
+.idea
+.iml
+.ipr
+.iws
+
+# VS Code
+.vscode
+
+# Logs
+.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific
+spring-boot-devtools.properties
