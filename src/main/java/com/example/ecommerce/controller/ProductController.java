@@ -11,11 +11,23 @@ import java.util.List;
 public class ProductController {
 
     private final ProductRepository repository;
-    public ProductController(ProductRepository repository) { this.repository = repository; }
+
+    public ProductController(ProductRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping
-    public List<Product> getAll() { return repository.findAll(); }
+    public List<Product> getAll() {
+        return repository.findAll();
+    }
 
     @PostMapping
-    public Product create(@RequestBody Product product) { return repository.save(product); }
+    public Product create(@RequestBody Product product) {
+        return repository.save(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
 }
